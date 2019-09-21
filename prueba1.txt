@@ -1,0 +1,8 @@
+program algo
+begin
+x := 4.32
+if then else
+ricardo
+x; tengo
+for
+end
