@@ -40,7 +40,7 @@ SIMB [$|_]
 int main() {
 FILE* archivo = stdin;
 char palabra[32];
-while(fscanf(archivo,"%s",palabra ))
+while(fscanf(archivo,"%s",palabra )==1)
 {
   yy_scan_string(palabra);
   int res = yylex();
@@ -152,14 +152,14 @@ while(fscanf(archivo,"%s",palabra ))
         }
     }else if(res==901)
     {
-        printf("~Identifier\n");
+        printf("~Identifier: %s\n",yytext);
     }else if(res==902)
     {
-        printf("~Integer\n");
+        printf("~Integer: %s\n",yytext);
     }
     else if(res==903)
     {
-        printf("~Float\n");
+        printf("~Float: %s\n",yytext);
     }
 }
 }
